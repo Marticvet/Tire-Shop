@@ -14,7 +14,7 @@ export class UsersService extends RestService {
 
     // get all users
     getUserCartItems(userId) {
-        this.resourceUrl = "users/shoppingCart/" + userId;
+        this.resourceUrl = "https://tireshop-api.herokuapp.com/users/shoppingCart/" + userId;
 
         return this.getAll();
     }
