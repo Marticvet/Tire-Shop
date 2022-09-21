@@ -2,7 +2,7 @@
 
 The client app it cannot work properly without the server, which you can find in my profile or download it from the link down below. Also this project is made with purpose of to show all my knowledge in the Word of Programming and especially the Front-end.
 
-Link for Tire-Shop-server repository: https://github.com/Marticvet/Tire-Shop-server
+Link for Tire-Shop-server repository: https://github.com/Marticvet/Tire-Shop-server <br />
 Link for Netlify app: https://632b0632019cdf2f4b6b0530--clever-croissant-5d10cd.netlify.app/
 
 # Getting Started with Create React App
