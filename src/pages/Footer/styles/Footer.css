@@ -1,5 +1,5 @@
 .footer {
-  height: 47rem;
+  height: 45rem;
   background-color: #353432;
   color: #f9f7f6;
   display: flex;
@@ -75,20 +75,19 @@
 .footer__support {
   max-width: 34rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 77%;
   flex-direction: column;
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 .footer__support li {
   list-style: none;
+  margin-bottom: 0.5rem;
 }
 .footer__support--heading {
   position: relative;
-  top: -3rem;
   font-size: 2.5rem;
   color: rgba(170, 170, 170, 0.863);
-  max-width: 20rem;
+  margin-bottom: 2.5rem;
 }
 .footer__support--links {
   text-decoration: none;
@@ -101,16 +100,17 @@
   max-width: 30rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 77%;
 }
 .footer__about li {
   list-style: none;
+  margin-bottom: 0.5rem;
 }
 .footer__about--heading {
   position: relative;
-  top: -3rem;
   font-size: 2.5rem;
   color: rgba(170, 170, 170, 0.863);
+  margin-bottom: 2.5rem;
 }
 .footer__about--links {
   text-decoration: none;

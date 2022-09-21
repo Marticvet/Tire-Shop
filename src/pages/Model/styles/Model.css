@@ -22,8 +22,7 @@
 }
 .model .product__details {
   max-width: 60rem;
-  min-width: 47rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -33,6 +32,7 @@
 }
 .model .product__details--heading-4 {
   margin-top: -1rem;
+  width: 49rem;
   font-size: 2.5rem;
   font-weight: 900;
   border-bottom: 1px solid black;
@@ -40,6 +40,7 @@
 }
 .model .product .details {
   display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
   height: 40rem;
 }
@@ -63,7 +64,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0rem 2.4rem;
   height: 30rem;
   position: relative;
 }

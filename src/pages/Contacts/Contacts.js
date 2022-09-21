@@ -115,6 +115,7 @@ function Contacts() {
                             });
                         }}
                         value={formData.firstName}
+                        required
                     />
                     <label
                         className="form__label form__label--2"
@@ -137,6 +138,7 @@ function Contacts() {
                             });
                         }}
                         value={formData.lastName}
+                        required
                     />
                     <label
                         className="form__label form__label--3"
@@ -159,6 +161,7 @@ function Contacts() {
                             });
                         }}
                         value={formData.email}
+                        required
                     />
                     <label
                         className="form__label form__label--4"
@@ -181,6 +184,7 @@ function Contacts() {
                             });
                         }}
                         value={formData.mobileNumber}
+                        required
                     />
                     <label
                         className="form__label form__label--5"
@@ -203,6 +207,7 @@ function Contacts() {
                             });
                         }}
                         value={formData.message}
+                        required
                     />
                     <select
                         className="form__select"

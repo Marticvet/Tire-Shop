@@ -84,59 +84,30 @@ function Footer() {
                         Customer Support
                     </h2>
                     <li>
-                        <Link className="footer__support--links" to={"/contacts"}>
+                        <Link
+                            className="footer__support--links"
+                            to={"/contacts"}
+                        >
                             Contact Us
                         </Link>
                     </li>
                     <li>
-                        <Link className="footer__support--links" to={"/contacts"}>
-                            Order Tracking
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__support--links" to={"/contacts"}>
-                            Warranty Information
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__support--links" to={"/contacts"}>
+                        <Link
+                            className="footer__support--links"
+                            to={"/loginInformation"}
+                        >
                             My Account
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__support--links" to={"/contacts"}>
-                            Accessibility
                         </Link>
                     </li>
                 </ul>
             </div>
 
-            <div className=" footer__about">
+            <div className="footer__about">
                 <ul>
                     <h2 className="footer__about--heading">About Tire Shop</h2>
                     <li>
-                        <Link className="footer__about--links" to={"/contacts"}>
-                            Contact Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__about--links" to={"/contacts"}>
-                            Order Tracking
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__about--links" to={"/contacts"}>
-                            Warranty Information
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__about--links" to={"/contacts"}>
-                            My Account
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer__about--links" to={"/contacts"}>
-                            Accessibility
+                        <Link className="footer__about--links" to={"/about"}>
+                            About Us
                         </Link>
                     </li>
                 </ul>

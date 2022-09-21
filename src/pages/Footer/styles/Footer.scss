@@ -1,7 +1,7 @@
 @import '../../../style-variables/variables.scss';
 
 .footer {
-    height: 47rem;
+    height: 45rem;
 
     background-color: $color-grey-dark-3;
     color: $color-grey-light-1;
@@ -96,22 +96,21 @@
     &__support {
         max-width: 34rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        // padding: 6rem 0;
+        height: 77%;
         flex-direction: column;
-        margin: 0 3rem;
+        margin: 0 2rem;
 
         li {
             list-style: none;
+            margin-bottom: .5rem;
         }
 
         &--heading {
             position: relative;
-            top: -3rem;
             font-size: 2.5rem;
             color: $color-grey-light-2;
-            max-width: 20rem;
+            // max-width: 20rem;
+            margin-bottom: 2.5rem;
         }
 
         &--links {
@@ -133,17 +132,19 @@
         max-width: 30rem;
         display: flex;
         justify-content: center;
-        align-items: center;
+        height: 77%;
 
         li {
             list-style: none;
+            margin-bottom: .5rem;
+
         }
 
         &--heading {
             position: relative;
-            top: -3rem;
             font-size: 2.5rem;
             color: $color-grey-light-2;
+            margin-bottom: 2.5rem;
         }
 
         &--links {

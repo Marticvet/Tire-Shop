@@ -30,32 +30,33 @@ function Search() {
     ];
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        width: "",
-        height: "",
-        diameter: "",
+        width: 0,
+        height: 0,
+        diameter: 0,
         season: "",
         brand: "",
+    });
+    const [validFormData, setValidFormData] = useState({
+        width: false,
+        height: false,
+        diameter: false,
     });
 
     function submitHandler(event) {
         event.preventDefault();
 
-        if (
-            formData.width === "" ||
-            formData.height === "" ||
-            formData.diameter === ""
-        ) {
-            return;
+        if (validFormData.width && validFormData.height && validFormData.diameter) {
+            navigate({
+                pathname: "sizes",
+                search: `width=${formData.width}&height=${
+                    formData.height
+                }&diameter=${formData.diameter}&season=${
+                    formData.season === "" ? "no" : formData.season
+                }&manufacturer=${
+                    formData.brand === "" ? "no" : formData.brand
+                }`,
+            });
         }
-
-        navigate({
-            pathname: "sizes",
-            search: `width=${formData.width}&height=${
-                formData.height
-            }&diameter=${formData.diameter}&season=${
-                formData.season === "" ? "no" : formData.season
-            }&manufacturer=${formData.brand === "" ? "no" : formData.brand}`,
-        });
     }
 
     return (
@@ -117,12 +118,17 @@ function Search() {
                             name="width"
                             className="dropdown dropdown__width"
                             value={formData.width}
-                            onChange={(event) =>
+                            onChange={(event) => {
+                                const currValue = Number(event.target.value);
                                 setFormData({
                                     ...formData,
-                                    width: event.target.value,
-                                })
-                            }
+                                    width: currValue,
+                                });
+                                setValidFormData({
+                                    ...validFormData,
+                                    width: currValue > 0 ? true : false,
+                                });
+                            }}
                         >
                             <option
                                 className="option option__width"
@@ -147,16 +153,23 @@ function Search() {
                             name="height"
                             className="dropdown dropdown__height"
                             value={formData.height}
-                            onChange={(event) =>
+                            onChange={(event) => {
+                                const currValue = Number(event.target.value);
                                 setFormData({
                                     ...formData,
-                                    height: event.target.value,
-                                })
-                            }
+                                    height: currValue,
+                                });
+                                setValidFormData({
+                                    ...validFormData,
+                                    height: currValue > 0 ? true : false,
+                                });
+                            }}
+
+                            required
                         >
                             <option
                                 className="option option__height"
-                                defaultChecked={"height"}
+                                value='0'
                             >
                                 - - - - -
                             </option>
@@ -177,12 +190,17 @@ function Search() {
                             name="diameter"
                             className="dropdown dropdown__diameter"
                             value={formData.diameter}
-                            onChange={(event) =>
+                            onChange={(event) => {
+                                const currValue = Number(event.target.value);
                                 setFormData({
                                     ...formData,
-                                    diameter: event.target.value,
-                                })
-                            }
+                                    diameter: currValue,
+                                });
+                                setValidFormData({
+                                    ...validFormData,
+                                    diameter: currValue > 0 ? true : false,
+                                });
+                            }}
                         >
                             <option
                                 className="option option__diameter"
@@ -214,7 +232,7 @@ function Search() {
 
                     <div className="additional">
                         <select
-                            name="diameter"
+                            name="season"
                             className="dropdown dropdown__season"
                             value={formData.season}
                             onChange={(event) =>
@@ -243,7 +261,7 @@ function Search() {
                             })}
                         </select>{" "}
                         <select
-                            name="diameter"
+                            name="brand"
                             className="dropdown dropdown__brand"
                             value={formData.brand}
                             onChange={(event) =>
