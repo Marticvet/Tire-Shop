@@ -22,7 +22,6 @@ function Models({
     const navigate = useNavigate();
     const { user, isLoggedIn } = useContext(AuthContext);
     const [addedToCart, setAddedToCart] = useState(false);
-    const [quantity, setQuantity] = useState(4);
     const copiedModels = models.map((model) => {
         return { ...model };
     });
@@ -67,8 +66,20 @@ function Models({
         return async () => {
             const userService = new UsersService();
 
+            const index = modelQuantity.findIndex((m) => {
+                if(m.id === id){
+                    return m;
+                }
+    
+                return null;
+            });
+    
+            if (index === -1) {
+                return null;
+            }
+    
             const item = {
-                quantity,
+                quantity: modelQuantity[index].quantity,
                 tire_id: id,
             };
 
@@ -252,7 +263,6 @@ function Models({
                                                     model.id,
                                                     currQuantity
                                                 );
-                                                setQuantity(currQuantity);
                                             }}
                                         >
                                             <option value="1">Qty: 1</option>
