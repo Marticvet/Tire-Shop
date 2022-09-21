@@ -57,8 +57,6 @@ export class RestService {
 
         headers.append("Authorization", localStorage.getItem('token'));
         headers.append("Content-Type", "application/json");
-        headers.header("Access-Control-Allow-Origin", "*");
-        headers.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
         return headers;
     }
