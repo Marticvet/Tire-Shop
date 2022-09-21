@@ -122,7 +122,16 @@ function Navbar({
             (async () => {
                 await userService
                     .loginUser({ email, password })
-                    .then(({ token, user }) => {
+                    .then(({ token, message, user }) => {
+                        if (message.includes("Invalid")) {
+                            window.alert(message);
+                            setFormData({
+                                ...formData,
+                                password: "",
+                            });
+                            return;
+                        }
+
                         if (!token) {
                             return;
                         }
@@ -132,6 +141,12 @@ function Navbar({
                             setShowPopup(true);
                             setOpenNavbar(false);
                             setMessage("Successfully Logged In!");
+
+                            setFormData({
+                                ...formData,
+                                email: "",
+                                password: "",
+                            });
                         }
                     });
             })();
@@ -139,23 +154,38 @@ function Navbar({
             (async () => {
                 await userService
                     .registerUser({ email, password, first_name, last_name })
-                    .then(({ message, user }) => {
+                    .then((data) => {
+                        let message = undefined;
+
+                        if (Array.isArray(data)) {
+                            message = data[0];
+                        } else {
+                            message = data.message;
+                        }
+
                         if (!message.includes("Successfully")) {
+                            window.alert(message);
+                            setFormData({
+                                ...formData,
+                                email: "",
+                                password: "",
+                            });
                             return;
                         }
 
                         setIsLoginForm(true);
                         setMessage("Successfully Registered!");
+
+                        setFormData({
+                            ...formData,
+                            email: "",
+                            password: "",
+                            first_name: "",
+                            last_name: "",
+                        });
                     });
             })();
         }
-        setFormData({
-            ...formData,
-            email: "",
-            password: "",
-            first_name: "",
-            last_name: "",
-        });
     }
 
     function logoutHandler(event) {
