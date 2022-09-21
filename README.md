@@ -1,14 +1,8 @@
-# Note when you start the app
+# Important
 
-You'll find a SQL dump in DATABASE_DUMP folder which is subfolder of server folder.
+The client app it cannot work properly without the server, which you can find in my profile or download it from the link down below. Also this project is made with purpose of to show all my knowledge in the Word of Programming and especially the Front-end.
 
-That's the information you need when you setup the MySQL Server.
-
-    host: "localhost",
-    port: '3306',
-    user: "root",
-    password: "Marticvet",
-    database: "tires_shop_idea2"
+Link for Tire-Shop-server repository: https://github.com/Marticvet/Tire-Shop-server
 
 # Getting Started with Create React App
 
