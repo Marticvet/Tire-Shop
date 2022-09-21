@@ -1,5 +1,5 @@
 const Config = {
-    BASE_URL: 'http://localhost:3030/'
+    BASE_URL: 'https://tireshop-api.herokuapp.com/'
 };
 
 export default Config;
