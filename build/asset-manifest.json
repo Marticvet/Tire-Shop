@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed736969.css",
+    "main.js": "/static/js/main.d9d4b4ca.js",
+    "static/js/787.c195ed86.chunk.js": "/static/js/787.c195ed86.chunk.js",
+    "static/media/banner.jpeg": "/static/media/banner.2de863a91eafabe2b864.jpeg",
+    "static/media/tire-storage.jpg": "/static/media/tire-storage.537a6784fe0031acfd69.jpg",
+    "static/media/group.png": "/static/media/group.e425f3a67282e1f6477f.png",
+    "static/media/manager.jpg": "/static/media/manager.a327898c4e01c778caa1.jpg",
+    "static/media/Tire Shop-logos_transparent.png": "/static/media/Tire Shop-logos_transparent.8624e4a337a1db8f3e5f.png",
+    "static/media/tirerack.png": "/static/media/tirerack.08d3a62bf5e0f5ea0816.png",
+    "static/media/michelin1-logo-vector.jpg": "/static/media/michelin1-logo-vector.17ce9869dbc4edcd6df5.jpg",
+    "static/media/call-worker.jpg": "/static/media/call-worker.47c86c181081dd53a488.jpg",
+    "static/media/meeting.jpg": "/static/media/meeting.ae13386d7ac240a950ee.jpg",
+    "static/media/call-center.jpg": "/static/media/call-center.d3fe903bfb79a422b6f9.jpg",
+    "static/media/Yokohama_logo.jpg": "/static/media/Yokohama_logo.e3a318d4d764a98e1134.jpg",
+    "static/media/tires.jpg": "/static/media/tires.b52475734a582979ff09.jpg",
+    "static/media/order-worker.jpg": "/static/media/order-worker.747d9a0d16bdfd4c296b.jpg",
+    "static/media/ceo1.jpg": "/static/media/ceo1.b75d7e7e291212812d45.jpg",
+    "static/media/Logo_Pirelli.svg.png": "/static/media/Logo_Pirelli.svg.83245c5be8d595bb722c.png",
+    "static/media/goodyear_logo.png": "/static/media/goodyear_logo.22e6e3e6e565290f421d.png",
+    "static/media/cooper-logo.png": "/static/media/cooper-logo.0f07bd5f16fdc306ccfe.png",
+    "static/media/firestone-logo.png": "/static/media/firestone-logo.e42626f194452cac130a.png",
+    "index.html": "/index.html",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.68bc9d9acc9245fa9071.svg",
+    "main.ed736969.css.map": "/static/css/main.ed736969.css.map",
+    "main.d9d4b4ca.js.map": "/static/js/main.d9d4b4ca.js.map",
+    "787.c195ed86.chunk.js.map": "/static/js/787.c195ed86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed736969.css",
+    "static/js/main.d9d4b4ca.js"
+  ]
+}
