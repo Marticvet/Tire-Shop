@@ -1,0 +1,371 @@
+.nav {
+  background-color: rgba(208, 206, 205, 0.9843137255);
+  font-size: 1.8rem;
+  font-weight: 500;
+  min-height: 5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding-right: 1.5rem;
+}
+.nav .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 0.5;
+  height: 5rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0 1rem;
+  margin-bottom: 0.4rem;
+}
+.nav .buttons__link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem;
+}
+.nav .buttons__link--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 100%;
+}
+.nav .rightSide {
+  display: flex;
+  justify-content: flex-end;
+  width: 50vw;
+  align-items: center;
+  flex-grow: 1;
+  height: 5rem;
+  position: relative;
+}
+.nav .rightSide .searchBar {
+  color: rgba(208, 206, 205, 0.9058823529);
+  display: flex;
+  flex-grow: 0.4;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 25rem;
+}
+.nav .rightSide .searchBar__search {
+  --size: 3.5rem;
+  border: 2px solid rgb(243, 101, 101);
+  display: flex;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  transition: width 450ms;
+  padding: 3px;
+  margin-right: 2rem;
+  background-color: white;
+}
+.nav .rightSide .searchBar__search--input {
+  border: 0;
+  padding: 0.25em 1em;
+  flex-grow: 1;
+  outline: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: rgb(231, 231, 231);
+}
+.nav .rightSide .searchBar__search--submit {
+  font-size: 2.5rem;
+  margin-left: auto;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 200ms ease-out;
+  width: calc(var(--size) - 10px);
+  height: calc(var(--size) - 10px);
+}
+.nav .rightSide .searchBar__search:focus-within {
+  width: 85%;
+}
+.nav .rightSide .searchBar__search:focus-within .searchBar__search--input {
+  opacity: 1;
+  z-index: initial;
+  cursor: initial;
+  width: calc(100% - var(--size));
+}
+.nav .rightSide .searchBar__search:focus-within .searchBar__search_--submit {
+  background-color: rgb(231, 231, 231);
+}
+.nav .rightSide .searchBar__search:focus-within .searchBar__search_--submit:hover, .nav .rightSide .searchBar__search:focus-within .searchBar__search_--submit:focus {
+  outline: 0;
+  outline: 1px solid black;
+}
+.nav .rightSide .profile {
+  width: 10rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0.02;
+}
+.nav .rightSide .profile__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 100%;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+.nav .rightSide .profile__buttons:hover {
+  cursor: pointer;
+}
+.nav .rightSide .profile__container {
+  height: 100%;
+  display: flex;
+}
+.nav .rightSide .profile__container--trigger {
+  display: flex;
+}
+.nav .blurredBackground {
+  position: absolute;
+  top: 4.9rem;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(1px) brightness(75%);
+          backdrop-filter: blur(1px) brightness(75%);
+  margin-top: 0.34rem;
+}
+@media only screen and (max-width: 1023px) {
+  .nav .blurredBackground {
+    margin-top: 0.1rem;
+  }
+}
+.nav .dropdown-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(250, 250, 250);
+}
+.nav .dropdown-menu.active {
+  height: 100vh;
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  box-shadow: -13px 0px 17px -12px rgba(0, 0, 0, 0.7);
+}
+.nav .account {
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+.nav .account h3 {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 20rem;
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+.nav .account__closeBtn {
+  height: 100%;
+  width: 3rem;
+}
+.nav .account__closeBtn:hover {
+  cursor: pointer;
+}
+.nav .loginView {
+  padding: 0 5rem;
+  padding-top: 5rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.nav .loginView .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav .loginView .form__login--label {
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.nav .loginView .form__login--input {
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 3rem;
+  padding-left: 1rem;
+}
+.nav .loginView .form__login--input:focus {
+  outline: 1px solid rgb(80, 114, 185);
+}
+.nav .loginView .loginBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  width: 90%;
+  height: 4rem;
+  margin-top: 1.5rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  border-radius: 3%;
+}
+.nav .loginView .loginBtn:hover {
+  cursor: pointer;
+}
+.nav .loginView .signUp {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nav .loginView .signUp h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.nav .loginView .signUp a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.6rem;
+}
+.nav .loginView .signUp a:focus, .nav .loginView .signUp a:visited {
+  color: blue;
+}
+.nav .loginView .signUp a span {
+  color: red;
+}
+.nav .registerView {
+  padding: 0 5rem;
+  padding-top: 5rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav .registerView .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nav .registerView .form__register--label {
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.nav .registerView .form__register--input {
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 3rem;
+  padding-left: 1rem;
+}
+.nav .registerView .form__register--input:focus {
+  outline: 1px solid rgb(80, 114, 185);
+}
+.nav .registerView .registerBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  width: 90%;
+  height: 4rem;
+  margin-top: 1.5rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  border-radius: 3%;
+}
+.nav .registerView .registerBtn:hover {
+  cursor: pointer;
+}
+.nav .registerView .signIn {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nav .registerView .signIn h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.nav .registerView .signIn a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.6rem;
+}
+.nav .registerView .signIn a:focus, .nav .registerView .signIn a:visited {
+  color: blue;
+}
+.nav .registerView .signIn a span {
+  color: red;
+}
+.nav .accountDetails {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 1rem;
+}
+.nav .accountDetails__info {
+  padding-left: 6rem;
+  border-bottom: 1px solid black;
+  margin: 0 2rem;
+  padding-bottom: 3rem;
+}
+.nav .accountDetails__info--heading-4 {
+  font-size: 2rem;
+}
+.nav .accountDetails__info--heading-5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.nav .accountDetails .list {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.nav .accountDetails .list__button {
+  text-decoration: none;
+  color: black;
+}
+.nav .accountDetails .list__button--loginInfo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  height: 4rem;
+}
+.nav .accountDetails .list__button--logout {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: rgb(63, 63, 153);
+}
+.nav .accountDetails .list__button--logout span {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.712);
+}/*# sourceMappingURL=Navbar.css.map */

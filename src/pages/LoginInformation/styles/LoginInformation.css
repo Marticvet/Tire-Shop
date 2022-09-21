@@ -1,0 +1,104 @@
+.loginInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 5rem;
+  margin-top: 3rem;
+}
+.loginInformation__heading {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  margin: 3rem 0;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.loginInformation__details {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.loginInformation .sideBar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 25rem;
+}
+.loginInformation .sideBar__button {
+  font-size: 2rem;
+  height: 6rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.loginInformation .update {
+  max-width: 70rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: whitesmoke;
+  flex-grow: 1;
+  margin-left: 5rem;
+}
+.loginInformation .update__form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 2rem;
+  background-color: white;
+  padding-top: 1rem;
+  flex-grow: 1;
+}
+.loginInformation .update__form--label {
+  font-size: 2.1rem;
+  font-weight: 400;
+  max-width: 35rem;
+  margin-bottom: 0.5rem;
+}
+.loginInformation .update__form--input {
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 3rem;
+  padding-left: 1rem;
+  max-width: 35rem;
+}
+.loginInformation .update__form--input:focus {
+  outline: 1px solid rgb(80, 114, 185);
+}
+.loginInformation .update__form--updateBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  height: 4rem;
+  margin-top: 1.5rem;
+  max-width: 35rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  border-radius: 3%;
+}
+.loginInformation .update__form--updateBtn:hover {
+  cursor: pointer;
+}
+.loginInformation .functionallity {
+  max-width: 70rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+.loginInformation .functionallity h1 {
+  font-size: 2.5rem;
+}
+.loginInformation .active {
+  color: red;
+}/*# sourceMappingURL=LoginInformation.css.map */

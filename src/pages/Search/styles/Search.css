@@ -1,0 +1,213 @@
+.search {
+  margin: 4rem;
+  height: 78rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  .search {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.search .information {
+  height: 60rem;
+  width: 61.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width: 1000px) {
+  .search .information {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .search .information {
+    margin-left: 3rem;
+    max-width: 44rem;
+  }
+}
+.search .information__img {
+  max-width: 50rem;
+  margin-bottom: 5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .search .information__img {
+    max-width: 40rem;
+  }
+}
+.search .information__heading--1 {
+  font-size: 2.3rem;
+}
+.search .information__heading--3 {
+  font-size: 1.8rem;
+  margin-top: 2.8rem;
+  height: 3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search .information__paragraph {
+  max-width: 46rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .search .information__paragraph {
+    max-width: 40rem;
+  }
+}
+.search .form {
+  height: 60rem;
+  width: 54rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(250, 249, 249);
+  padding: 0 5rem;
+}
+@media only screen and (max-width: 1200px) {
+  .search .form {
+    max-width: 50rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .search .form {
+    margin: 0 3rem;
+    max-width: 40rem;
+  }
+}
+.search .form__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+}
+.search .form__info--paragraph {
+  font-size: 1.7rem;
+  width: 100%;
+  font-weight: 400;
+}
+.search .form__info--img {
+  height: 13rem;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .search .form__info--img {
+    max-width: 25rem;
+  }
+}
+.search .form__selector {
+  max-width: 30rem;
+}
+.search .form__selector--dropdown {
+  height: 3rem;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.search .dropdown {
+  border-radius: 2px;
+  font-weight: 600;
+}
+.search .dropdown__width {
+  max-width: 6rem;
+  margin-right: 2rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+}
+.search .dropdown__height {
+  max-width: 6rem;
+  margin-right: 2rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+}
+.search .dropdown__diameter {
+  max-width: 6rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+}
+.search .dropdown__season {
+  max-width: 9rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+}
+.search .dropdown__brand {
+  max-width: 9rem;
+  margin-left: 4rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+}
+.search .dropdown:focus {
+  outline: none;
+}
+.search .dropdown:hover {
+  cursor: pointer;
+}
+.search .label {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.search .label span {
+  color: red;
+}
+.search .label__wrapper {
+  max-width: 30rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.search .label__size {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.search .label__width {
+  width: 8rem;
+}
+.search .label__height {
+  width: 8rem;
+}
+.search .label__diameter {
+  width: 8rem;
+}
+.search .label__season {
+  width: 8rem;
+}
+.search .label__brand {
+  margin-left: 7rem;
+}
+.search .additional {
+  height: 3rem;
+  display: flex;
+}
+.search .find {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+}
+.search .find__btn {
+  width: 12rem;
+  background-color: red;
+  color: white;
+  border: none;
+  height: 100%;
+  border-radius: 6px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.search .find__btn:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=Search.css.map */

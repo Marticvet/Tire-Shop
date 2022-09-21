@@ -1,0 +1,110 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  background-color: rgb(235, 229, 229);
+  max-width: 160rem;
+  margin: 0 auto;
+  margin-top: 5.3rem;
+}
+.about .workshop__img {
+  width: 100%;
+}
+.about .information {
+  max-width: 100%;
+  margin: 5rem 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+@media only screen and (max-width: 1200px) {
+  .about .information {
+    min-height: 60rem;
+  }
+}
+.about .information__expert {
+  max-height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: inherit;
+  padding: 0 3rem;
+}
+.about .information__expert--heading {
+  margin-left: 3rem;
+  max-width: 30rem;
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+.about .information__expert--paragraph {
+  max-width: 100rem;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-align: start;
+  padding: 0 3rem;
+  line-height: 1.6;
+}
+.about .information__img {
+  height: 30rem;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .about .information__img {
+    height: 26.5rem;
+  }
+}
+.about .workers {
+  min-height: 40rem;
+  max-width: 100%;
+  background-color: rgb(248, 245, 245);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.about .workers__images {
+  max-width: 35rem;
+  margin: 2rem 2.1rem;
+  height: 30rem;
+  filter: brightness(75%);
+}
+.about .ceo {
+  min-height: 50rem;
+  padding-bottom: 5rem;
+  max-width: 100%;
+  background-color: rgb(248, 245, 245);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+.about .ceo__img {
+  max-width: 66rem;
+}
+.about .ceo__information {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  padding-top: 5rem;
+}
+.about .ceo__information--heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.about .ceo__information--paragraph {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+}/*# sourceMappingURL=About.css.map */

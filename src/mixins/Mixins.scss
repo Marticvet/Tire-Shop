@@ -1,0 +1,227 @@
+@mixin login-form {
+    .loginView {
+        padding: 0 5rem;
+        padding-top: 5rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            &__login {
+
+                &--label {
+                    font-size: 2.1rem;
+                    font-weight: 400;
+                    margin-bottom: .5rem;
+                }
+
+                &--input {
+                    margin-bottom: 1.5rem;
+                    border-radius: 5px;
+                    border: 1px solid black;
+                    height: 3rem;
+                    padding-left: 1rem;
+
+                    &:focus {
+                        outline: 1px solid rgb(80, 114, 185);
+
+                    }
+                }
+            }
+        }
+
+        .loginBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            width: 90%;
+            height: 4rem;
+            margin-top: 1.5rem;
+
+            font-size: 2.3rem;
+            font-weight: 600;
+            border-radius: 3%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .signUp {
+            margin-top: 6rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h3 {
+                font-size: 2.4rem;
+                font-weight: 500;
+            }
+
+            a {
+                text-decoration: none;
+                color: blue;
+                font-size: 1.6rem;
+
+                &:focus,
+                &:visited {
+                    color: blue;
+
+                }
+
+                span {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+@mixin register-form {
+    .registerView {
+        padding: 0 5rem;
+        padding-top: 5rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            &__register {
+
+                &--label {
+                    font-size: 2.1rem;
+                    font-weight: 400;
+                    margin-bottom: .5rem;
+                }
+
+                &--input {
+                    margin-bottom: 1.5rem;
+                    border-radius: 5px;
+                    border: 1px solid black;
+                    height: 3rem;
+                    padding-left: 1rem;
+
+                    &:focus {
+                        outline: 1px solid rgb(80, 114, 185);
+
+                    }
+                }
+            }
+        }
+
+        .registerBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            width: 90%;
+            height: 4rem;
+            margin-top: 1.5rem;
+
+            font-size: 2.3rem;
+            font-weight: 600;
+            border-radius: 3%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .signIn {
+            margin-top: 6rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h3 {
+                font-size: 2.4rem;
+                font-weight: 500;
+            }
+
+            a {
+                text-decoration: none;
+                color: blue;
+                font-size: 1.6rem;
+
+                &:focus,
+                &:visited {
+                    color: blue;
+
+                }
+
+                span {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+@mixin profile-info {
+    .accountDetails {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding-top: 1rem;
+
+        &__info {
+            padding-left: 6rem;
+            border-bottom: 1px solid $color-black;
+            margin: 0 2rem;
+            padding-bottom: 3rem;
+
+            &--heading {
+                &-4 {
+                    font-size: 2rem;
+                }
+
+                &-5 {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+
+            &__button {
+                text-decoration: none;
+                color: black;
+
+                &--loginInfo {
+                    font-size: 2rem;
+                    margin-bottom: .5rem;
+                    height: 4rem;
+                }
+
+                &--logout {
+                    margin-top: .5rem;
+                    font-weight: 500;
+                    font-size: 2.2rem;
+                    color: rgb(63, 63, 153);
+
+                    span {
+                        margin-left: .5rem;
+                        font-size: 2rem;
+                        color: rgba(255, 0, 0, 0.712);
+                    }
+                }
+            }
+        }
+    }
+}

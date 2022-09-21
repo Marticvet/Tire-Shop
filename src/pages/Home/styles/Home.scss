@@ -1,0 +1,169 @@
+@import '../../../style-variables/variables.scss';
+
+.home {
+    .banner {
+        display: flex;
+        position: relative;
+        height: 90rem;
+        max-width: 100%;
+        background: linear-gradient(rgba($color-black, 0.5),
+                rgba($color-black, 0.5)), url('../../../img/banner.jpeg') no-repeat 64% 69%;
+
+        &__details {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            justify-items: center;
+            margin-left: 10rem;
+            margin-bottom: 10rem;
+            line-height: 1.4;
+            max-width: 45rem;
+
+            @media (max-width: $bp-medium) {
+                max-width: 25rem;
+            }
+
+            .detail {
+
+                &--heading-2 {
+                    color: $color-grey-light-1;
+                    margin-bottom: 2.3rem;
+                    font-size: 2rem;
+                }
+
+                &--paragraph {
+                    color: $color-grey-light-1;
+                    margin-top: 1rem;
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__button--container {
+            display: flex;
+            border: 0;
+            margin-top: 1.7rem;
+
+            @media (max-width: $bp-medium) {
+                flex-direction: column;
+                max-width: 25rem;
+            }
+        }
+    }
+
+    .btn {
+        min-width: 20rem;
+        height: 3rem;
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 0 2rem 5rem rgba(#000, .4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__tires {
+            color: white;
+            background-color: red;
+            margin-right: 3rem;
+            padding-top: .3rem;
+
+            @media (max-width: $bp-medium) {
+                width: 25rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        &__products {
+            color: $color-grey-dark-2;
+            background-color: white;
+            padding-top: .3rem;
+        }
+
+    }
+
+    .gallery {
+        margin: 3.5rem auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3, 45rem);
+        grid-template-rows: repeat(4, 30rem);
+        grid-gap: 2rem;
+
+        @media only screen and (max-width: 1500px) {
+            grid-template-columns: repeat(2, 49rem);
+            grid-template-rows: repeat(4, 30rem);
+        }
+
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: repeat(2, 35rem);
+            grid-template-rows: repeat(4, 30rem);
+            column-gap: 10rem;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: 45rem;
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        &__img {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__container {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+            color: $color-grey-dark-2;
+            font-weight: 500;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            width: fit-content;
+        }
+
+        &__heading-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 3.5rem;
+            margin-top: -2rem;
+
+        }
+
+        &__paragraph {
+            font-size: 2.3rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 90%;
+        }
+
+        &__item {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+
+        .custom {
+
+            &__height {
+                height: 30rem;
+            }
+        }
+
+        border-bottom: 1.5px solid $color-grey-dark-1;
+    }
+}
