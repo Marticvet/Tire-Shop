@@ -130,7 +130,7 @@
                     position: absolute;
                     bottom: 6rem;
                     right: 2.3rem;
-                    width: 35%;
+                    width: 40%;
                     height: 2.5rem;
                     text-align: center;
                     font-size: 1.6rem;
@@ -342,4 +342,11 @@
             }
         }
     }
+}
+
+.nomodel {
+    min-height: 65.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

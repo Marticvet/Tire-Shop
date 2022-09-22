@@ -6,6 +6,7 @@ import { SizesService } from "../../services/sizes.service.js";
 import { ManufacturerService } from "../../services/tires.service.js";
 import { UsersService } from "../../services/users.service.js";
 import "./styles/Model.css";
+import { RevolvingDot } from "react-loader-spinner";
 
 const images = {
     michelin: require("../../img/michelin1-logo-vector.jpg"),
@@ -34,6 +35,7 @@ function Model({ setOpenNavbar }) {
         description: true,
         sizes: false,
     });
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         if (addedToCart && isLoggedIn) {
@@ -90,8 +92,30 @@ function Model({ setOpenNavbar }) {
         });
     }, [model, availableSizes, availableDiameters]);
 
-    if (Object.keys(model).length === 0) {
-        return <></>;
+    useEffect(() => {
+        setTimeout(
+            () =>
+                Object.keys(model).length > 0 ? setIsLoading(false) : setIsLoading(true),
+            500
+        );
+    }, [model]);
+
+    if (isLoading) {
+        return (
+            <div className="nomodel">
+                <RevolvingDot
+                    height="1000"
+                    width="1000"
+                    radius="60"
+                    color="#4fa94d"
+                    secondaryColor=""
+                    ariaLabel="revolving-dot-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div>
+        );
     }
 
     const manufactrerName = model.manufacturer_name.toLowerCase().trim();

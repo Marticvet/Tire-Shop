@@ -5,6 +5,7 @@ import AuthContext from "../../providers/authentication.js";
 import { UsersService } from "../../services/users.service.js";
 import "./styles/Manufacturer-Models.css";
 import "./styles/Models.css";
+import { RevolvingDot } from "react-loader-spinner";
 
 function Models({
     models,
@@ -25,6 +26,7 @@ function Models({
     const copiedModels = models.map((model) => {
         return { ...model };
     });
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         if (addedToCart && isLoggedIn) {
@@ -67,17 +69,17 @@ function Models({
             const userService = new UsersService();
 
             const index = modelQuantity.findIndex((m) => {
-                if(m.id === id){
+                if (m.id === id) {
                     return m;
                 }
-    
+
                 return null;
             });
-    
+
             if (index === -1) {
                 return null;
             }
-    
+
             const item = {
                 quantity: modelQuantity[index].quantity,
                 tire_id: id,
@@ -122,6 +124,39 @@ function Models({
         });
 
         setModelQuantity(newState);
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (models.length > 0) {
+                setIsLoading(false);
+            }
+
+            if (
+                messageAlert.message &&
+                messageAlert.message.includes("not found")
+            ) {
+                setIsLoading(false);
+            }
+        }, 500);
+    }, [models, messageAlert]);
+
+    if (isLoading) {
+        return (
+            <div className="nomodels" style={{ marginTop: "15rem" }}>
+                <RevolvingDot
+                    height="1000"
+                    width="1000"
+                    radius="60"
+                    color="#4fa94d"
+                    secondaryColor=""
+                    ariaLabel="revolving-dot-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div>
+        );
     }
 
     return (
@@ -178,7 +213,11 @@ function Models({
                                     >
                                         <img
                                             src={model.model_imageUrl}
-                                            alt={model.modelName}
+                                            alt={
+                                                model.manufacturer_name +
+                                                " " +
+                                                model.model_name
+                                            }
                                             className="image__container--img"
                                         />
                                     </Link>
@@ -225,8 +264,10 @@ function Models({
                                     <span>Total Price:</span>
                                     <h2 className="price__info--totalPrice">
                                         $
-                                        {(model.tire_price *
-                                            modelQuantity[index].quantity).toFixed(2)}
+                                        {(
+                                            model.tire_price *
+                                            modelQuantity[index].quantity
+                                        ).toFixed(2)}
                                     </h2>
 
                                     <span>Per Tire:</span>
