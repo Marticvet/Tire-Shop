@@ -11,23 +11,27 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
 
         &__img {
-            width: 32rem;
+            width: 30rem;
             height: 36rem;
             margin-right: 5rem;
 
             img {
-                width: 100%;
-                height: 100%;
+                float: right;
+                width: 80%;
+                object-fit: cover;
             }
         }
 
         &__details {
             max-width: 60rem;
-            padding-left: 2rem;
+            padding-left: 11rem;
             display: flex;
             flex-direction: column;
+
+
 
             &--img {
                 width: 20rem;

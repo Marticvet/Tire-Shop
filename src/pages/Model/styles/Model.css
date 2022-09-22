@@ -10,19 +10,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .model .product__img {
-  width: 32rem;
+  width: 30rem;
   height: 36rem;
   margin-right: 5rem;
 }
 .model .product__img img {
-  width: 100%;
-  height: 100%;
+  float: right;
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .model .product__details {
   max-width: 60rem;
-  padding-left: 2rem;
+  padding-left: 11rem;
   display: flex;
   flex-direction: column;
 }
