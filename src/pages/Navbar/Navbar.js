@@ -173,6 +173,7 @@ function Navbar({
                             return;
                         }
 
+                        setShowPopup(true);
                         setIsLoginForm(true);
                         setMessage("Successfully Registered!");
 

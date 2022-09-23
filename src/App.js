@@ -11,6 +11,7 @@ import LoginInformation from "./pages/LoginInformation/LoginInformation.js";
 import ManufacturerModels from "./pages/Manufacturer-Models/Manufacturer-Models.js";
 import Model from "./pages/Model/Model.js";
 import Navbar from "./pages/Navbar/Navbar.js";
+import ScrollToTop from "./pages/ScrollToTop/ScrollToTop.js";
 import Search from "./pages/Search/Search.js";
 import ShoppingCart from "./pages/Shopping-Cart/Shopping-Cart.js";
 import AuthContext, { getUser } from "./providers/authentication.js";
@@ -44,47 +45,72 @@ function App() {
                         setCurrentProfileBtn={setCurrentProfileBtn}
                         setIsSidebarOpen={setIsSidebarOpen}
                     />
-                    <Routes>
-                        <Route path="*" element={<Home />} />
-                        <Route path="/contacts" element={<Contacts />}></Route>
-                        <Route path="/brands" element={<Brands />}></Route>
+                    <ScrollToTop>
+                        <Routes>
+                            <Route path="*" element={<Home />} />
+                            <Route
+                                path="/contacts"
+                                element={<Contacts />}
+                            ></Route>
+                            <Route path="/brands" element={<Brands />}></Route>
 
-                        <Route
-                            path="/tires/manufacturers/:manufacturer_name/tire-model/:tireId"
-                            element={<Model setOpenNavbar={setOpenNavbar}/>}
-                        ></Route>
-                        <Route path="/about" element={<About />}></Route>
-                        <Route
-                            path="/search/sizes"
-                            element={<FoundTires isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>}
-                        ></Route>
-                        <Route
-                            path="/search/models"
-                            element={<FoundTires isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>}
-                        ></Route>
-                        <Route path="/search" element={<Search />}></Route>
-                        <Route
-                            path="/shopping_cart"
-                            element={
-                                <ProtectedRoute user={authValue.isLoggedIn}>
-                                    <ShoppingCart />
-                                </ProtectedRoute>
-                            }
-                        ></Route>
-                        <Route
-                            path="/loginInformation"
-                            element={
-                                <LoginInformation
-                                    currentProfileBtn={currentProfileBtn}
-                                    setCurrentProfileBtn={setCurrentProfileBtn}
-                                />
-                            }
-                        ></Route>
-                        <Route
-                            path="/tires/manufacturers/:name/tire-models"
-                            element={<ManufacturerModels setOpenNavbar={setOpenNavbar} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>}
-                        ></Route>
-                    </Routes>
+                            <Route
+                                path="/tires/manufacturers/:manufacturer_name/tire-model/:tireId"
+                                element={
+                                    <Model setOpenNavbar={setOpenNavbar} />
+                                }
+                            ></Route>
+                            <Route path="/about" element={<About />}></Route>
+                            <Route
+                                path="/search/sizes"
+                                element={
+                                    <FoundTires
+                                        isSidebarOpen={isSidebarOpen}
+                                        setIsSidebarOpen={setIsSidebarOpen}
+                                    />
+                                }
+                            ></Route>
+                            <Route
+                                path="/search/models"
+                                element={
+                                    <FoundTires
+                                        isSidebarOpen={isSidebarOpen}
+                                        setIsSidebarOpen={setIsSidebarOpen}
+                                    />
+                                }
+                            ></Route>
+                            <Route path="/search" element={<Search />}></Route>
+                            <Route
+                                path="/shopping_cart"
+                                element={
+                                    <ProtectedRoute user={authValue.isLoggedIn}>
+                                        <ShoppingCart />
+                                    </ProtectedRoute>
+                                }
+                            ></Route>
+                            <Route
+                                path="/loginInformation"
+                                element={
+                                    <LoginInformation
+                                        currentProfileBtn={currentProfileBtn}
+                                        setCurrentProfileBtn={
+                                            setCurrentProfileBtn
+                                        }
+                                    />
+                                }
+                            ></Route>
+                            <Route
+                                path="/tires/manufacturers/:name/tire-models"
+                                element={
+                                    <ManufacturerModels
+                                        setOpenNavbar={setOpenNavbar}
+                                        isSidebarOpen={isSidebarOpen}
+                                        setIsSidebarOpen={setIsSidebarOpen}
+                                    />
+                                }
+                            ></Route>
+                        </Routes>
+                    </ScrollToTop>
                 </AuthContext.Provider>
                 <Footer />
             </BrowserRouter>
