@@ -5,6 +5,17 @@ The client app it cannot work properly without the server, which you can find in
 Link for Tire-Shop-server repository: https://github.com/Marticvet/Tire-Shop-server <br />
 Link for Netlify app: https://tiresshop.netlify.app/
 
+## About the Application
+
+Tire Shop is a Single Page Application, which is designed to be an online tire
+shop. We're working with the world's top 10 tire manufacturers, providing our
+clients with a large variety of top quality tires from which they can decide which
+tire models and manufacturers suits best for their cars and pockets. Every single
+user can register and login in our online shop. They can also add items to their
+shopping carts, which they can buy immediately or at a later point.
+
+Technologies: JavaScript, ReactJs, HTML5, CSS3, SCSS, MySQL, Express.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
