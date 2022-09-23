@@ -1,6 +1,6 @@
 # Link for my Application
 
-https://tiresshop.netlify.app/
+Here you can visit direct the Tire-Shop application: https://tiresshop.netlify.app/
 
 # Important
 
