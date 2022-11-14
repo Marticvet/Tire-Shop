@@ -1,9 +1,12 @@
+# Link for my Application
+
+Here you can visit direct the Tire-Shop application: https://tiresshop.netlify.app/
+
 # Important
 
-The client app it cannot work properly without the server, which you can find in my profile or download it from the link down below. Also this project is made with purpose of to show all my knowledge in the Word of Programming and especially the Front-end.
+Normally the client app it cannot work properly without the server, which you can find in my profile or download it from the link down below. For the purpose of easy access and usage from everyone, the project is hosted on cloud platforms. Also this project is made with purpose of to show all my knowledge in the Word of Programming and especially the Front-end.
 
 Link for Tire-Shop-server repository: https://github.com/Marticvet/Tire-Shop-server <br />
-Link for Netlify app: https://tiresshop.netlify.app/
 
 ## About the Application
 
