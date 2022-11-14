@@ -91,12 +91,16 @@ function App() {
                             <Route
                                 path="/loginInformation"
                                 element={
-                                    <LoginInformation
-                                        currentProfileBtn={currentProfileBtn}
-                                        setCurrentProfileBtn={
-                                            setCurrentProfileBtn
-                                        }
-                                    />
+                                    <ProtectedRoute user={authValue.isLoggedIn}>
+                                        <LoginInformation
+                                            currentProfileBtn={
+                                                currentProfileBtn
+                                            }
+                                            setCurrentProfileBtn={
+                                                setCurrentProfileBtn
+                                            }
+                                        />
+                                    </ProtectedRoute>
                                 }
                             ></Route>
                             <Route
