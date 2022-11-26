@@ -86,11 +86,9 @@ function ShoppingCart() {
     }, 0);
 
     useEffect(() => {
-        setTimeout(() => {
-            if (models.length > 0 || !isEmptyCart) {
-                setIsLoading(false);
-            }
-        }, 500);
+        if (models.length > 0 || !isEmptyCart) {
+            setIsLoading(false);
+        }
     }, [models, isEmptyCart]);
 
     return (

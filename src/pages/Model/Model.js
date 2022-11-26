@@ -93,11 +93,9 @@ function Model({ setOpenNavbar }) {
     }, [model, availableSizes, availableDiameters]);
 
     useEffect(() => {
-        setTimeout(
-            () =>
-                Object.keys(model).length > 0 ? setIsLoading(false) : setIsLoading(true),
-            500
-        );
+        Object.keys(model).length > 0
+            ? setIsLoading(false)
+            : setIsLoading(true);
     }, [model]);
 
     if (isLoading) {

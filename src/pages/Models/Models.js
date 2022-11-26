@@ -127,18 +127,16 @@ function Models({
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            if (models.length > 0) {
-                setIsLoading(false);
-            }
+        if (models.length > 0) {
+            setIsLoading(false);
+        }
 
-            if (
-                messageAlert.message &&
-                messageAlert.message.includes("not found")
-            ) {
-                setIsLoading(false);
-            }
-        }, 500);
+        if (
+            messageAlert.message &&
+            messageAlert.message.includes("not found")
+        ) {
+            setIsLoading(false);
+        }
     }, [models, messageAlert]);
 
     if (isLoading) {
