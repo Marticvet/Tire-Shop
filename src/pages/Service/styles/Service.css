@@ -1,6 +1,5 @@
 @charset "UTF-8";
 .services {
-  grid-template-columns: -webkit-min-content;
   grid-template-columns: min-content;
   display: flex;
   flex-wrap: wrap;

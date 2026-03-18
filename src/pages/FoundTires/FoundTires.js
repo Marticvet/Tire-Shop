@@ -205,6 +205,7 @@ function FoundTires({isSidebarOpen, setIsSidebarOpen}) {
                 diameter={diameter}
                 lastPath={pathname.split("/").slice(1)[1]}
                 searchedWord={word}
+                setIsSidebarOpen={setIsSidebarOpen}
             />
             <div className="content">
                 <Sidebar

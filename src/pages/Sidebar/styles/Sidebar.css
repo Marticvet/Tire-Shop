@@ -38,9 +38,6 @@
   color: black;
   font-weight: 400;
 }
-.sidenav__ul .list__wrapper {
-  border-bottom: 1px solid black;
-}
 .sidenav__ul .list__wrapper--link {
   text-decoration: none;
   height: 5rem;
@@ -51,6 +48,9 @@
 }
 .sidenav__ul .list__wrapper--link:link, .sidenav__ul .list__wrapper--link:visited {
   color: currentColor;
+}
+.sidenav__ul .list__wrapper {
+  border-bottom: 1px solid black;
 }
 .sidenav__ul .list__price--dropdown {
   transition: all 0.2s;
@@ -128,7 +128,6 @@
 .sidenav__ul .list__speedIndex--wrapper {
   display: grid;
   grid-template-columns: repeat(2, 10rem);
-  grid-template-rows: repeat(8, -webkit-min-content);
   grid-template-rows: repeat(8, min-content);
   grid-gap: 1.5rem;
   align-items: center;
@@ -228,10 +227,12 @@
 }
 .sidenav .unavailable {
   background-color: rgb(235, 231, 231);
-  border: none;
 }
 .sidenav .unavailable:hover {
   cursor: default;
+}
+.sidenav .unavailable {
+  border: none;
 }
 
 .hamburger {
@@ -265,8 +266,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(2px) brightness(75%);
-          backdrop-filter: blur(2px) brightness(75%);
+  backdrop-filter: blur(2px) brightness(75%);
 }
 .hamburger__active--menu {
   background-color: white;
@@ -277,8 +277,10 @@
 }
 .hamburger .unavailable {
   background-color: rgb(235, 231, 231);
-  border: none;
 }
 .hamburger .unavailable:hover {
   cursor: default;
+}
+.hamburger .unavailable {
+  border: none;
 }/*# sourceMappingURL=Sidebar.css.map */

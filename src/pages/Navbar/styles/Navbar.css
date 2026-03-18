@@ -19,7 +19,6 @@
   align-items: center;
   flex-grow: 0.5;
   height: 5rem;
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   padding: 0 1rem;
@@ -148,8 +147,7 @@
   right: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(1px) brightness(75%);
-          backdrop-filter: blur(1px) brightness(75%);
+  backdrop-filter: blur(1px) brightness(75%);
   margin-top: 0.34rem;
 }
 @media only screen and (max-width: 1023px) {

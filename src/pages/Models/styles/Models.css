@@ -22,7 +22,6 @@
 .font-size {
   font-size: 1.6rem;
   font-weight: 600;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 0.7rem;

@@ -34,7 +34,6 @@
   width: 40%;
   display: flex;
   height: 12rem;
-  position: -webkit-sticky;
   position: sticky;
   flex-direction: column;
   top: 10%;
@@ -86,7 +85,6 @@
 .shoppingCart .font-size {
   font-size: 1.6rem;
   font-weight: 600;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 0.7rem;
